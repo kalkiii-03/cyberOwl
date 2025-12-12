@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — CyberOwl</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade { animation: fadeIn 1s ease-out forwards; }
+  </style>
+</head>
+
+<body class="bg-black text-gray-200">
+
+ <!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-lg">
+  <div class="flex items-center justify-between px-6 py-4">
+    <h1 class="text-xl font-semibold tracking-wider text-white">CyberOwl</h1>
+
+    <!-- Hamburger Button -->
+    <button id="menuBtn" class="md:hidden text-white text-3xl focus:outline-none">
+      ☰
+    </button>
+
+    <!-- Desktop Links -->
+    <div class="space-x-6 hidden md:flex">
+      <a href="index.html" class="hover:text-gray-400">Home</a>
+      <a href="services.html" class="hover:text-gray-400">Services</a>
+      <a href="portfolio.html" class="hover:text-gray-400">Portfolio</a>
+      <a href="about.html" class="hover:text-gray-400">About</a>
+      <a href="contact.html" class="hover:text-gray-400">Contact</a>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden flex-col bg-black px-6 pb-4 md:hidden">
+    <a href="index.html" class="py-2 border-b border-gray-800">Home</a>
+    <a href="services.html" class="py-2 border-b border-gray-800">Services</a>
+    <a href="portfolio.html" class="py-2 border-b border-gray-800">Portfolio</a>
+    <a href="about.html" class="py-2 border-b border-gray-800">About</a>
+    <a href="contact.html" class="py-2">Contact</a>
+  </div>
+
+  <script>
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+
+    btn.onclick = () => {
+      menu.classList.toggle("hidden");
+      menu.classList.toggle("flex");
+    };
+  </script>
+</nav>
+
+  <!-- HERO / INTRO -->
+  <section class="pt-32 pb-20 px-6 fade max-w-5xl mx-auto">
+    <h2 class="text-4xl font-bold text-white mb-4 text-center">About CyberOwl</h2>
+    <p class="text-gray-400 text-center max-w-3xl mx-auto text-lg">
+      CyberOwl is a premium web development studio focused on crafting 
+      high-performance, visually striking digital experiences.  
+      We combine clean design, sharp development, and strategic thinking 
+      to build websites that elevate brands.
+    </p>
+  </section>
+
+  <!-- 2-COLUMN SECTION -->
+  <section class="px-6 pb-24 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 fade">
+    <div>
+      <h3 class="text-3xl font-semibold text-white mb-4">Who We Are</h3>
+      <p class="text-gray-400 leading-relaxed">
+        We aren't here to make “just another website.”  
+        We build products that actually convert — fast, responsive, and crafted 
+        with precision. Everything we do is built on modern standards, clean 
+        design principles, and performance-first development.
+      </p>
+
+      <p class="text-gray-400 leading-relaxed mt-4">
+        Our approach is simple:  
+        **Design with intention. Build with expertise. Deliver with excellence.**
+      </p>
+    </div>
+
+    <div class="bg-black/40 border border-gray-700 rounded-xl p-6">
+      <h3 class="text-3xl font-semibold text-white mb-4">Why Clients Choose Us</h3>
+      
+      <ul class="space-y-4 text-gray-300">
+        <li>• Premium design that stands out</li>
+        <li>• Clean, modern, high-performance code</li>
+        <li>• Fast delivery and professional process</li>
+        <li>• Fully responsive websites</li>
+        <li>• Client-first mindset</li>
+        <li>• Long-term support and improvements</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- STATS SECTION -->
+  <section class="pb-24 px-6 max-w-6xl mx-auto fade">
+    <div class="grid md:grid-cols-3 gap-10 text-center">
+      
+      <div class="bg-black/40 border border-gray-700 rounded-xl p-8">
+        <h3 class="text-4xl font-bold text-white">20+</h3>
+        <p class="text-gray-400 mt-2">Projects Completed</p>
+      </div>
+
+      <div class="bg-black/40 border border-gray-700 rounded-xl p-8">
+        <h3 class="text-4xl font-bold text-white">10+</h3>
+        <p class="text-gray-400 mt-2">Brands Helped</p>
+      </div>
+
+      <div class="bg-black/40 border border-gray-700 rounded-xl p-8">
+        <h3 class="text-4xl font-bold text-white">5⭐</h3>
+        <p class="text-gray-400 mt-2">Client Satisfaction</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-6 text-center text-gray-500 text-sm">
+    © 2025 CyberOwl — All rights reserved.
+  </footer>
+
+</body>
+</html>

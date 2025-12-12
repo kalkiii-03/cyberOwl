@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — CyberOwl</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade { animation: fadeIn 1s ease-out forwards; }
+  </style>
+</head>
+
+<body class="bg-black text-gray-200">
+
+  <!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-lg">
+  <div class="flex items-center justify-between px-6 py-4">
+    <h1 class="text-xl font-semibold tracking-wider text-white">CyberOwl</h1>
+
+    <!-- Hamburger Button -->
+    <button id="menuBtn" class="md:hidden text-white text-3xl focus:outline-none">
+      ☰
+    </button>
+
+    <!-- Desktop Links -->
+    <div class="space-x-6 hidden md:flex">
+      <a href="index.html" class="hover:text-gray-400">Home</a>
+      <a href="services.html" class="hover:text-gray-400">Services</a>
+      <a href="portfolio.html" class="hover:text-gray-400">Portfolio</a>
+      <a href="about.html" class="hover:text-gray-400">About</a>
+      <a href="contact.html" class="hover:text-gray-400">Contact</a>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden flex-col bg-black px-6 pb-4 md:hidden">
+    <a href="index.html" class="py-2 border-b border-gray-800">Home</a>
+    <a href="services.html" class="py-2 border-b border-gray-800">Services</a>
+    <a href="portfolio.html" class="py-2 border-b border-gray-800">Portfolio</a>
+    <a href="about.html" class="py-2 border-b border-gray-800">About</a>
+    <a href="contact.html" class="py-2">Contact</a>
+  </div>
+
+  <script>
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+
+    btn.onclick = () => {
+      menu.classList.toggle("hidden");
+      menu.classList.toggle("flex");
+    };
+  </script>
+</nav>
+
+  <!-- PORTFOLIO SECTION -->
+  <section class="pt-32 pb-24 px-6 fade">
+    <h2 class="text-4xl font-bold text-center text-white mb-4">Our Portfolio</h2>
+    <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+      A curated selection of high-quality projects delivered by CyberOwl.
+    </p>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+
+      <!-- PROJECT CARD 1 -->
+      <a href="#" class="group relative block overflow-hidden rounded-xl border border-gray-700 hover:border-gray-400 transition-all">
+        <img src="Luxury.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-all duration-500" />
+        <div class="p-4 bg-black/60 group-hover:bg-black/80 transition">
+          <h3 class="text-xl font-semibold text-white">Luxury Brand Website</h3>
+          <p class="text-gray-400 mt-1">Premium UI for a high-end fashion label.</p>
+        </div>
+      </a>
+
+      <!-- PROJECT CARD 2 -->
+      <a href="#" class="group relative block overflow-hidden rounded-xl border border-gray-700 hover:border-gray-400 transition-all">
+        <img src="Tech.png" class="w-full h-56 object-cover group-hover:scale-110 transition-all duration-500" />
+        <div class="p-4 bg-black/60 group-hover:bg-black/80 transition">
+          <h3 class="text-xl font-semibold text-white">Startup Landing Page</h3>
+          <p class="text-gray-400 mt-1">Conversion-focused design for a SaaS tool.</p>
+        </div>
+      </a>
+
+      <!-- PROJECT CARD 3 -->
+      <a href="#" class="group relative block overflow-hidden rounded-xl border border-gray-700 hover:border-gray-400 transition-all">
+        <img src="Restaurant.png" class="w-full h-56 object-cover group-hover:scale-110 transition-all duration-500" />
+        <div class="p-4 bg-black/60 group-hover:bg-black/80 transition">
+          <h3 class="text-xl font-semibold text-white">Restaurant</h3>
+          <p class="text-gray-400 mt-1">High-speed online shop with modern UI.</p>
+        </div>
+      </a>
+
+      <!-- PROJECT CARD 4 -->
+      <a href="#" class="group relative block overflow-hidden rounded-xl border border-gray-700 hover:border-gray-400 transition-all">
+        <img src="Grocery.png" class="w-full h-56 object-cover group-hover:scale-110 transition-all duration-500" />
+        <div class="p-4 bg-black/60 group-hover:bg-black/80 transition">
+          <h3 class="text-xl font-semibold text-white">Grocery store</h3>
+          <p class="text-gray-400 mt-1">Clean visuals for a creative professional.</p>
+        </div>
+      </a>
+
+      <!-- PROJECT CARD 5 -->
+      <a href="#" class="group relative block overflow-hidden rounded-xl border border-gray-700 hover:border-gray-400 transition-all">
+        <img src="Hotel.png" class="w-full h-56 object-cover group-hover:scale-110 transition-all duration-500" />
+        <div class="p-4 bg-black/60 group-hover:bg-black/80 transition">
+          <h3 class="text-xl font-semibold text-white">Business Website</h3>
+          <p class="text-gray-400 mt-1">Corporate site designed for authority.</p>
+        </div>
+      </a>
+
+      <!-- PROJECT CARD 6 -->
+      <a href="#" class="group relative block overflow-hidden rounded-xl border border-gray-700 hover:border-gray-400 transition-all">
+        <img src="Hospital.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-all duration-500" />
+        <div class="p-4 bg-black/60 group-hover:bg-black/80 transition">
+          <h3 class="text-xl font-semibold text-white">Hospital</h3>
+          <p class="text-gray-400 mt-1">A sleek UI for internal business tools.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-6 text-center text-gray-500 text-sm">
+    © 2025 CyberOwl — All rights reserved.
+  </footer>
+
+</body>
+</html>

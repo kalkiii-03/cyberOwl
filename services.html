@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — CyberOwl</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Smooth fade animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade { animation: fadeIn 1s ease-out forwards; }
+  </style>
+</head>
+
+<body class="bg-black text-gray-200">
+
+ <!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-lg">
+  <div class="flex items-center justify-between px-6 py-4">
+    <h1 class="text-xl font-semibold tracking-wider text-white">CyberOwl</h1>
+
+    <!-- Hamburger Button -->
+    <button id="menuBtn" class="md:hidden text-white text-3xl focus:outline-none">
+      ☰
+    </button>
+
+    <!-- Desktop Links -->
+    <div class="space-x-6 hidden md:flex">
+      <a href="index.html" class="hover:text-gray-400">Home</a>
+      <a href="services.html" class="hover:text-gray-400">Services</a>
+      <a href="portfolio.html" class="hover:text-gray-400">Portfolio</a>
+      <a href="about.html" class="hover:text-gray-400">About</a>
+      <a href="contact.html" class="hover:text-gray-400">Contact</a>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden flex-col bg-black px-6 pb-4 md:hidden">
+    <a href="index.html" class="py-2 border-b border-gray-800">Home</a>
+    <a href="services.html" class="py-2 border-b border-gray-800">Services</a>
+    <a href="portfolio.html" class="py-2 border-b border-gray-800">Portfolio</a>
+    <a href="about.html" class="py-2 border-b border-gray-800">About</a>
+    <a href="contact.html" class="py-2">Contact</a>
+  </div>
+
+  <script>
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+
+    btn.onclick = () => {
+      menu.classList.toggle("hidden");
+      menu.classList.toggle("flex");
+    };
+  </script>
+</nav>
+
+  <!-- SERVICES SECTION -->
+  <section class="pt-32 pb-24 px-6 fade">
+    <h2 class="text-4xl font-bold text-center text-white mb-4">Our Services</h2>
+    <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+      At CyberOwl, we craft high-performance digital experiences designed to elevate your brand and grow your business.
+    </p>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+
+      <!-- CARD 1 -->
+      <div class="bg-black/40 border border-gray-700 p-6 rounded-xl hover:border-gray-400 transition-all">
+        <div class="text-4xl mb-4">💻</div>
+        <h3 class="text-xl font-semibold text-white">Website Development</h3>
+        <p class="text-gray-400 mt-2">
+          Modern, responsive, and lightning-fast websites designed with precision.
+        </p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="bg-black/40 border border-gray-700 p-6 rounded-xl hover:border-gray-400 transition-all">
+        <div class="text-4xl mb-4">🎨</div>
+        <h3 class="text-xl font-semibold text-white">UI / UX Design</h3>
+        <p class="text-gray-400 mt-2">
+          Clean, elegant, user-focused designs tailored to your brand identity.
+        </p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="bg-black/40 border border-gray-700 p-6 rounded-xl hover:border-gray-400 transition-all">
+        <div class="text-4xl mb-4">⚡</div>
+        <h3 class="text-xl font-semibold text-white">Performance Optimization</h3>
+        <p class="text-gray-400 mt-2">
+          Speed improvements, SEO boosts, and technical refinements for maximum impact.
+        </p>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="bg-black/40 border border-gray-700 p-6 rounded-xl hover:border-gray-400 transition-all">
+        <div class="text-4xl mb-4">📱</div>
+        <h3 class="text-xl font-semibold text-white">Responsive Design</h3>
+        <p class="text-gray-400 mt-2">
+          Flawless experience across all devices — mobile, tablet, and desktop.
+        </p>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="bg-black/40 border border-gray-700 p-6 rounded-xl hover:border-gray-400 transition-all">
+        <div class="text-4xl mb-4">🛠️</div>
+        <h3 class="text-xl font-semibold text-white">Maintenance & Support</h3>
+        <p class="text-gray-400 mt-2">
+          Ongoing support, updates, and performance checks for your website.
+        </p>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="bg-black/40 border border-gray-700 p-6 rounded-xl hover:border-gray-400 transition-all">
+        <div class="text-4xl mb-4">🚀</div>
+        <h3 class="text-xl font-semibold text-white">Brand Identity</h3>
+        <p class="text-gray-400 mt-2">
+          Logo design, brand systems, and visual consistency for stronger impact.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-6 text-center text-gray-500 text-sm">
+    © 2025 CyberOwl — All rights reserved.
+  </footer>
+
+</body>
+</html>

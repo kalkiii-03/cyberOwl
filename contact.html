@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — CyberOwl</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade { animation: fadeIn 1s ease-out forwards; }
+  </style>
+</head>
+
+<body class="bg-black text-gray-200">
+
+  <!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-lg">
+  <div class="flex items-center justify-between px-6 py-4">
+    <h1 class="text-xl font-semibold tracking-wider text-white">CyberOwl</h1>
+
+    <!-- Hamburger Button -->
+    <button id="menuBtn" class="md:hidden text-white text-3xl focus:outline-none">
+      ☰
+    </button>
+
+    <!-- Desktop Links -->
+    <div class="space-x-6 hidden md:flex">
+      <a href="index.html" class="hover:text-gray-400">Home</a>
+      <a href="services.html" class="hover:text-gray-400">Services</a>
+      <a href="portfolio.html" class="hover:text-gray-400">Portfolio</a>
+      <a href="about.html" class="hover:text-gray-400">About</a>
+      <a href="contact.html" class="hover:text-gray-400">Contact</a>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden flex-col bg-black px-6 pb-4 md:hidden">
+    <a href="index.html" class="py-2 border-b border-gray-800">Home</a>
+    <a href="services.html" class="py-2 border-b border-gray-800">Services</a>
+    <a href="portfolio.html" class="py-2 border-b border-gray-800">Portfolio</a>
+    <a href="about.html" class="py-2 border-b border-gray-800">About</a>
+    <a href="contact.html" class="py-2">Contact</a>
+  </div>
+
+  <script>
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+
+    btn.onclick = () => {
+      menu.classList.toggle("hidden");
+      menu.classList.toggle("flex");
+    };
+  </script>
+</nav>
+
+  <!-- CONTACT HEADER -->
+  <section class="pt-32 pb-16 px-6 fade max-w-3xl mx-auto text-center">
+    <h2 class="text-4xl font-bold text-white mb-4">Get in Touch</h2>
+    <p class="text-gray-400 text-lg">
+      Have a project in mind? Let's build something exceptional.  
+      Fill the form below and we’ll get back to you soon.
+    </p>
+  </section>
+
+  <!-- FORM WRAPPER -->
+  <section class="px-6 pb-24 fade max-w-4xl mx-auto">
+    <div class="bg-black/40 border border-gray-700 rounded-xl p-6 md:p-8">
+
+      <!-- Google Form Embedded -->
+      <div class="w-full">
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLScU8IYpwZaCf-aLNk5TgdiTYpatpFDVd23Ot-d5FYRajTXtrA/viewform?embedded=true"
+          width="100%"
+          height="1250"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          class="rounded-xl">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-6 text-center text-gray-500 text-sm">
+    © 2025 CyberOwl — All rights reserved.
+  </footer>
+
+</body>
+</html>
